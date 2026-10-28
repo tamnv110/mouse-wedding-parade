@@ -1,0 +1,59 @@
+:root{
+  --paper:#eadbb9; --paper-2:#f4ead3; --card:#fbf5e6; --ink:#221c16; --ink-2:#5c4f40;
+  --son:#b5372a; --gold:#dda737; --la:#5b7a37; --line:#d3c19a;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#1c1813; --paper-2:#241f18; --card:#2b251d; --ink:#f1e8d6; --ink-2:#c2b39b;
+    --son:#e2675a; --gold:#e8b94e; --la:#93b46a; --line:#463c2f;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.65 "Be Vietnam Pro",system-ui,-apple-system,sans-serif}
+html[data-lang="vi"] .en, html[data-lang="en"] .vi{display:none !important}
+a{color:var(--son)}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+header.top{border-bottom:2px solid var(--ink);background:var(--paper-2)}
+header.top .wrap{display:flex;align-items:center;gap:14px;height:64px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:700}
+.brand img{width:36px;height:36px;border-radius:9px;border:2px solid var(--ink)}
+nav.links{display:flex;gap:18px;margin-left:auto;font-size:15px}
+nav.links a{color:var(--ink-2);text-decoration:none}
+nav.links a[aria-current="page"],nav.links a:hover{color:var(--son)}
+.seg{display:inline-flex;border:2px solid var(--ink);border-radius:999px;overflow:hidden;flex:none}
+.seg button{border:0;background:transparent;color:var(--ink);font:600 13px "Be Vietnam Pro",sans-serif;padding:5px 11px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+h1,h2{font-family:"Pattaya",Georgia,serif;font-weight:400;color:var(--son);line-height:1.15}
+h1{font-size:54px;margin:0 0 8px}
+h2{font-size:34px;margin:0 0 12px}
+h3{font-size:19px;margin:18px 0 6px}
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;padding:56px 0 40px}
+.hero .sub{font-size:20px;color:var(--ink-2);margin:0 0 18px}
+.hero img{width:100%;max-width:320px;justify-self:center;border-radius:22%;border:3px solid var(--ink);box-shadow:8px 8px 0 var(--ink)}
+.badge{display:inline-block;background:var(--ink);color:var(--paper);padding:11px 20px;border-radius:12px;font-weight:600;text-decoration:none}
+.badge small{display:block;font-size:12px;font-weight:400;opacity:.75}
+section{padding:36px 0;border-top:2px dashed var(--line)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--card);border:2px solid var(--ink);border-radius:14px;padding:16px 18px}
+.card h3{margin-top:0}
+ol.levels{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+ol.levels li{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:2px solid var(--ink);border-radius:12px;padding:10px 12px}
+.seal{flex:none;display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--son);color:#fff;font-weight:700;font-size:15px}
+ol.levels b{display:block}
+ol.levels span.g{color:var(--ink-2);font-size:15px}
+.prose{max-width:720px}
+.prose h2{margin-top:8px}
+details{background:var(--card);border:2px solid var(--ink);border-radius:12px;padding:12px 16px;margin:10px 0}
+summary{font-weight:600;cursor:pointer}
+.contact{background:var(--card);border:2px solid var(--ink);border-radius:14px;padding:18px 20px;margin:18px 0}
+footer{border-top:2px solid var(--ink);margin-top:40px;padding:22px 0 40px;font-size:14px;color:var(--ink-2)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px}
+footer nav{display:flex;gap:16px;margin-left:auto}
+@media (max-width:760px){
+  h1{font-size:40px}
+  .hero{grid-template-columns:1fr;padding-top:32px}
+  .hero img{max-width:200px;order:-1}
+  .grid,ol.levels{grid-template-columns:1fr}
+  nav.links{display:none}
+}
